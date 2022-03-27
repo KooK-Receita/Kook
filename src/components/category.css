@@ -1,0 +1,11 @@
+ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.categories li {
+  background-color: orange;
+  border-radius: 2.5rem;
+}

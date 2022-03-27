@@ -1,0 +1,24 @@
+.content {
+  width: 60%;
+  background-color: lightgray;
+}
+
+.cringe {
+  height: 20%;
+  background-color: orange;
+  margin-right: 5%;
+  margin-left: 5%;
+  border-radius: 2.5rem;
+}
+.main-content {
+  height: 15%;
+  margin-top: 5.5%;
+}
+.content-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+}
