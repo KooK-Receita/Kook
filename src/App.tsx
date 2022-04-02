@@ -1,16 +1,17 @@
 import "./App.css";
-import Content from "./components/content";
-import LeftMenu from "./components/left-menu";
-import "bootstrap/dist/css/bootstrap.min.css";
-import RigthMenu from "./components/rigth-menu";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import LeftMenu from "./components/left-menu/left-menu";
+import Content from "./components/content/content";
+import { Container, Row } from "react-bootstrap";
 
 function App() {
   return (
-    <div className="app">
-      <LeftMenu />
-      <Content />
-      <RigthMenu />
-    </div>
+    <Container fluid h-vh-100>
+      <Row>
+        <LeftMenu/>
+        <Content />
+      </Row>
+    </Container>
   );
 }
 
