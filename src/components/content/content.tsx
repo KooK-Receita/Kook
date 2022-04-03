@@ -4,13 +4,10 @@ import "./content.css";
 
 function Content() {
   return (
-    <Col xxl={11}>
+    <Col sm={11}>
       <Header />
-      <Col >
-        asdhbasdbj
-      </Col>
+      <Col>asdhbasdbj</Col>
     </Col>
-
   );
 }
 

@@ -6,8 +6,8 @@ import { Container, Row } from "react-bootstrap";
 function App() {
   return (
     <Container fluid h-vh-100>
-      <Row>
-        <LeftMenu/>
+      <Row className="d-flex">
+        <LeftMenu />
         <Content />
       </Row>
     </Container>
