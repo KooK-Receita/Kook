@@ -4,7 +4,11 @@ import "./left-menu.css";
 import { Col, Row } from "react-bootstrap";
 
 function LeftMenu() {
-  return <Col className="left-menu">left</Col>;
+  return (
+    <Col className="left-menu">
+      <FontAwesomeIcon icon={faBars} id="menu-icon" />
+    </Col>
+  );
 }
 
 export default LeftMenu;

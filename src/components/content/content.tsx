@@ -4,9 +4,12 @@ import "./content.css";
 
 function Content() {
   return (
-    <Col sm={11}>
+    <Col>
       <Header />
-      <Col>asdhbasdbj</Col>
+      <Col id="body">
+        <div>Adicione sua receita</div>
+        <div>Categorias</div>
+      </Col>
     </Col>
   );
 }
