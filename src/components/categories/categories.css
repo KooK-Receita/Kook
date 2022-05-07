@@ -1,0 +1,31 @@
+.category-row {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    overflow-x: auto;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.category-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.arrow {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    object-fit: cover;
+    width: auto;
+}
+
+.arrow img {
+    cursor: pointer;
+}
+
+.left-arrow img {
+    transform: rotate(180deg)
+}

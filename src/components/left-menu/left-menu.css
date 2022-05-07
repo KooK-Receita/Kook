@@ -1,0 +1,13 @@
+.left-menu {
+  flex: 0 0 5%;
+  max-width: 5%;
+  background: #FFFFFF;
+  box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.25);
+  
+}
+
+#menu-icon {
+  margin-left: 37%;
+  margin-top: 70%;
+  height: 1.75rem;
+}
