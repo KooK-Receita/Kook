@@ -28,14 +28,14 @@ export default function ModalFiltro() {
         </Row>
 
         <Row>
-          <Col md={5}>
+          <Col md={6}>
             <Form.Group>
               <Form.Label>Ingrediente</Form.Label>
               <Form.Control type="text" />
             </Form.Group>
           </Col>
 
-          <Col>
+          <Col md={5}>
             <Form.Group>
               <Form.Label>Porções</Form.Label>
               <Form.Control type="text" />

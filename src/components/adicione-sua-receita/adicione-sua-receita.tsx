@@ -21,27 +21,35 @@ function AdicioneSuaReceita() {
       <div className="ads">
         <div className="inside">
           <span>
-            <a href="#" onClick={() => setCriarIsOpen(true)}>
+            <a className="modalLink" onClick={() => setCriarIsOpen(true)}>
               Adicione sua receita
             </a>
           </span>
           <Modal isOpen={modalCriarIsOpen} style={customStyles}>
             <ModalCriar />
-            <button type="button" onClick={() => setCriarIsOpen(false)}>
-              Fechar
-            </button>
+            <Button
+              variant="secondary"
+              type="button"
+              onClick={() => setCriarIsOpen(false)}
+            >
+              Voltar
+            </Button>
           </Modal>
         </div>
         <div className="inside">
           <span>
-            <a href="javascript:void(0)" onClick={() => setFiltroIsOpen(true)}>
+            <a className="modalLink" onClick={() => setFiltroIsOpen(true)}>
               Filtre uma receita
             </a>
           </span>
           <Modal isOpen={modalFiltroIsOpen} style={customStyles}>
             <ModalFiltro />
-            <Button type="button" onClick={() => setFiltroIsOpen(false)}>
-              Fechar
+            <Button
+              variant="secondary"
+              type="button"
+              onClick={() => setFiltroIsOpen(false)}
+            >
+              Voltar
             </Button>
           </Modal>
         </div>

@@ -1,5 +1,6 @@
 
 .inside {
+    display: flex;
     background: #FFC700;
 
     border-radius: 20px;
@@ -11,12 +12,27 @@
     text-align: center;
     color: #FFFFFF;
     font-size: 2rem;
+
+    align-items: center;
+    justify-content: center;
 }
 
+.inside .modalLink {
+    color: black;
+    text-decoration: none;
+
+    cursor: pointer;
+    font-weight: 500;
+}
 .ads {
     display: flex;
     justify-content: space-between;
     margin-top: 25px;
 
+}
+
+button {
+    padding: 5px 15px;
+    margin-top: 15px;
 }
 
