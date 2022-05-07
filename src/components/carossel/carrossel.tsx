@@ -34,7 +34,7 @@ const Carrosel = () => {
   }, [index]);
 
   return (
-    <ContextProvider.Provider value={{ vetorDeElementos, index }}>
+    <ContextProvider.Provider value={{ vetorDeElementos, index, setIndex }}>
       <CorpoCarrossel />
     </ContextProvider.Provider>
   );
