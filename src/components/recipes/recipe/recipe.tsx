@@ -1,5 +1,4 @@
-import { Col, Row } from "react-bootstrap";
-import bruschetta from "../../../assets/bruschetta.png";
+import bruschetta from "../../../assets/imagens_receitas/bruschetta.png";
 import relogio from "../../../assets/relogio.png";
 
 import "./recipe.css";
