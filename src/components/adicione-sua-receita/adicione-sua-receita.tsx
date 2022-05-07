@@ -59,6 +59,13 @@ function AdicioneSuaReceita() {
             >
               Voltar
             </Button>
+            <Button
+              variant="warning"
+              type="button"
+              onClick={() => setFiltroIsOpen(false)}
+            >
+              Filtrar
+            </Button>
           </Modal>
         </div>
       </div>

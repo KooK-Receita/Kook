@@ -24,7 +24,9 @@ export default function ModalCriar() {
           <Col md={2}>
             <Form.Group>
               <Form.Label>Unidade</Form.Label>
-              <Form.Select />
+              <Form.Select>
+                <option>Minutos</option>
+              </Form.Select>
             </Form.Group>
           </Col>
           <Col md={2}>
@@ -58,7 +60,7 @@ export default function ModalCriar() {
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col md={5}>
             <Form.Group>
               <Form.Label>Categoria</Form.Label>
               <Form.Control type="text" />
@@ -69,7 +71,12 @@ export default function ModalCriar() {
               <textarea className="form-control"></textarea>
             </Form.Group>
           </Col>
-          <Col>Adicione uma imagem</Col>
+          <Col md={5}>
+            <Form.Group>
+              <Form.Label>Adicione uma imagem</Form.Label>
+              <input className="form-control" type="file" />
+            </Form.Group>
+          </Col>
         </Row>
       </Form>
     </div>
