@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { ContextProvider } from "./carrossel";
 
-const { vetorDeElementos, index, setIndex }: any = useContext(ContextProvider);
-
 const CorpoCarrossel: React.FC = () => {
+  const { vetorDeElementos, index, setIndex }: any = useContext(
+    ContextProvider
+  );
   return (
     <section>
       {vetorDeElementos.map((item: any) => {

@@ -5,7 +5,7 @@ import Categories from "../categories/categories";
 import Header from "../header/header";
 import Recipes from "../recipes/recipes";
 import "./content.css";
-
+import React from "react";
 function Content() {
   return (
     <Col>

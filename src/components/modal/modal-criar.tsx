@@ -1,5 +1,6 @@
 import "./modal.css";
 import { Button, Col, Form, Row } from "react-bootstrap";
+import React from "react";
 
 export default function ModalCriar() {
   return (

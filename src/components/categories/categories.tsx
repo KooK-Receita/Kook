@@ -2,6 +2,7 @@ import { Col, Row } from "react-bootstrap";
 import Category from "./card/category";
 import "./categories.css";
 import arrow from "../../assets/arrow.png";
+import React from "react";
 
 function Categories() {
   return (

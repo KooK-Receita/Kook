@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Col, Form, Row } from "react-bootstrap";
-
+import React from "react";
 export default function ModalFiltro() {
   return (
     <div>

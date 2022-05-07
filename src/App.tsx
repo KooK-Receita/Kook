@@ -4,7 +4,7 @@ import LeftMenu from "./components/left-menu/left-menu";
 import Content from "./components/content/content";
 import Carrosel from "./components/carossel/carrossel";
 import { Container, Row } from "react-bootstrap";
-
+import React from "react";
 function App() {
   return (
     <Container id="main" fluid h-vh-100>

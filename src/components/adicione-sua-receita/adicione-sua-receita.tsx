@@ -4,7 +4,7 @@ import ModalFiltro from "../modal/modal-filtro";
 import Modal from "react-modal";
 import { useState } from "react";
 import ModalCriar from "../modal/modal-criar";
-
+import React from "react";
 function AdicioneSuaReceita() {
   const [modalFiltroIsOpen, setFiltroIsOpen] = useState(false);
   const [modalCriarIsOpen, setCriarIsOpen] = useState(false);
