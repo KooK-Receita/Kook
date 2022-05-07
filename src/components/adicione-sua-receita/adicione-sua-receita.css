@@ -28,11 +28,11 @@
     display: flex;
     justify-content: space-between;
     margin-top: 25px;
-
 }
 
 button {
     padding: 5px 15px;
     margin-top: 15px;
+    margin-right: 5px;
 }
 

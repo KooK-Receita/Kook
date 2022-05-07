@@ -13,6 +13,7 @@ function AdicioneSuaReceita() {
     content: {
       marginRight: "15%",
       marginLeft: "15%",
+      borderRadius: "25px",
     },
   };
 
@@ -33,6 +34,13 @@ function AdicioneSuaReceita() {
               onClick={() => setCriarIsOpen(false)}
             >
               Voltar
+            </Button>
+            <Button
+              variant="success"
+              type="button"
+              onClick={() => setFiltroIsOpen(false)}
+            >
+              Salvar
             </Button>
           </Modal>
         </div>
