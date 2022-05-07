@@ -1,0 +1,10 @@
+form div {
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+form div label {
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+}
