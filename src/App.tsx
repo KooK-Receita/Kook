@@ -10,7 +10,6 @@ function App() {
     <Container id="main" fluid h-vh-100>
       <Row className="d-flex">
         <LeftMenu />
-        <Carrosel />
         <Content />
       </Row>
     </Container>

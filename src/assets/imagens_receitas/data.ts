@@ -4,7 +4,7 @@ const data = [
     imagem: "./bruschetta.png",
     nome: "Bruschetta",
   },
-  /*{
+  {
     id: 2,
     imagem: "./pizza.png",
     nome: "Bruschetta",
@@ -23,7 +23,7 @@ const data = [
     id: 5,
     imagem: "./salada_de_frutas.png",
     nome: "Bruschetta",
-  },*/
+  },
 ];
 
 export default data;
