@@ -1,4 +1,8 @@
 import bruschetta from "./bruschetta.png";
+import macarrao from "./macarrao.jpg";
+import pizza from "./pizza.jpg";
+import pao from "./pao.jpg";
+import salada from "./salada_de_frutas.jpg";
 const data = [
   {
     id: 1,
@@ -7,22 +11,22 @@ const data = [
   },
   {
     id: 2,
-    imagem: bruschetta,
+    imagem: pizza,
     nome: "Pizza",
   },
   {
     id: 3,
-    imagem: bruschetta,
+    imagem: macarrao,
     nome: "Macarrão",
   },
   {
     id: 4,
-    imagem: bruschetta,
+    imagem: pao,
     nome: "Pão",
   },
   {
     id: 5,
-    imagem: bruschetta,
+    imagem: salada,
     nome: "Salada de frutas",
   },
 ];
