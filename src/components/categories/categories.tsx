@@ -5,23 +5,10 @@ import arrow from "../../assets/arrow.png";
 import React, { useRef, useEffect } from "react";
 
 function Categories() {
-  const ref: any = useRef<HTMLDivElement>(null);
-  
-  const scroll = () => {}
-  useEffect(() => {
-    setTimeout(() => {
-      if(ref.current.scrollLeft != ref.scrollWidth){
-        ref.current.scrollTo(ref.scrollLeft + 2, 0)
-      }
-    },3000) 
-  },[ref])
-    
-  
-
   return (
-    <div className="category-container" ref={ref}>
+    <div className="category-container">
       <div className="arrow left-arrow">
-        <img src={arrow}  />
+        <img src={arrow} />
       </div>
 
       <Col md={9}>
@@ -36,7 +23,7 @@ function Categories() {
       </Col>
 
       <div className="arrow right-arrow">
-        <img src={arrow}  />
+        <img src={arrow} />
       </div>
     </div>
   );
