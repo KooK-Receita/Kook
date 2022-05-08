@@ -10,16 +10,20 @@ const CorpoCarrossel: React.FC = () => {
     <div className="content-div">
       {vetorDeElementos.map((item: any, itemIndex: number) => {
         const { id, nome, imagem } = item;
+
         let slideClass = "nextSlide";
+
         if (itemIndex === index) {
           slideClass = "currentSlide";
         }
-        if (
+
+        //Can potentially break the carroussel uncomment with caution
+        /*if (
           itemIndex === 0 ||
           (itemIndex === 0 && itemIndex === vetorDeElementos.length - 1)
         ) {
           slideClass = "prevSlide";
-        }
+        }*/
         return (
           <article key={id} className={slideClass}>
             <img src={imagem} alt="image_de_receita" className="image" />

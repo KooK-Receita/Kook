@@ -29,7 +29,7 @@ const Carrosel = () => {
   useEffect(() => {
     let indiceIntervalo = setTimeout(() => {
       setIndex(index + 1);
-    }, 3000);
+    }, 5000);
     return () => clearTimeout(indiceIntervalo);
   }, [index]);
 
