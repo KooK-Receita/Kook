@@ -1,31 +1,32 @@
 .category-row {
-    display:flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 
-    overflow-x: auto;
-    justify-content: space-between;
-    margin-top: 25px;
+  overflow-x: auto;
+  justify-content: space-between;
+  margin-top: 25px;
 }
 .category-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow-x: scroll;
 }
 
 .arrow {
-    display: flex;
-    flex-wrap: nowrap;
-    align-content: center;
-    align-items: center;
-    object-fit: cover;
-    width: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  object-fit: cover;
+  width: auto;
 }
 
 .arrow img {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .left-arrow img {
-    transform: rotate(180deg)
+  transform: rotate(180deg);
 }
