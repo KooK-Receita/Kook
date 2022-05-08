@@ -3,11 +3,17 @@
   max-width: 5%;
   background: #FFFFFF;
   box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.25);
-  
+  height: 100vh;
 }
 
 #menu-icon {
   margin-left: 37%;
   margin-top: 70%;
   height: 1.75rem;
+}
+
+@media screen and (max-width: 1275px) {
+  .left-menu {
+    display: none;
+  }
 }

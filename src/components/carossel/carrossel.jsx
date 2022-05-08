@@ -4,7 +4,7 @@ import "./carrosel.css"
 export default function Carrosel (){
     return (
         <Col md={9}>
-            <div class="rated">
+            <div className="rated">
                 oiiiiiiiiiiii
             </div>
         </Col>

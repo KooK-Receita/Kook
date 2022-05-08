@@ -5,7 +5,7 @@ import { Col, Row } from "react-bootstrap";
 
 function LeftMenu() {
   return (
-    <Col className="left-menu">
+    <Col xl className="left-menu">
       <FontAwesomeIcon icon={faBars} id="menu-icon" />
     </Col>
   );

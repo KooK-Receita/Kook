@@ -7,7 +7,7 @@ interface ModalCriarProps {
 }
 
 export default function ModalCriar(props: ModalCriarProps) {
-  const [state, setState] = useState<any>({});
+  const [state, setState] = useState<any>({unidadeTempo : "Minutos" });
 
   function handleInputChange(event: any) {
     const target = event?.target;
@@ -47,7 +47,7 @@ export default function ModalCriar(props: ModalCriarProps) {
           </Col>
           <Col md={2}>
             <Form.Group>
-              <Form.Label>Unidade</Form.Label>
+              <Form.Label>Unidade de tempo</Form.Label>
               <Form.Select onChange={handleInputChange} name="unidadeTempo">
                 <option>Minutos</option>
                 <option>Horas</option>

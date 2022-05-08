@@ -25,7 +25,7 @@ export default function Recipe(props: RecipeProps) {
       <div className="prepare">
         <img width={86} height={86} src={relogio} />
         <span className="prepare-time">
-          {tempoPreparo + " " + unidadeTempo[0]}
+          {tempoPreparo + " " + unidadeTempo}
         </span>
       </div>
     </div>

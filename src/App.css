@@ -71,4 +71,9 @@ nav.default-bg.padding-nav.navbar.navbar-expand.navbar-light {
 #main {
   background-color: rgb(245, 237, 237);
   font-family: 'Roboto Flex', sans-serif;
+  height: 100%;
+}
+
+html, body, #root {
+  height: 100%
 }
