@@ -1,11 +1,16 @@
 import "./adicione-sua-receita.css";
-import { Button, Col, Row } from "react-bootstrap";
+import { Button, Col } from "react-bootstrap";
 import ModalFiltro from "../modal/modal-filtro";
 import Modal from "react-modal";
-import { useState } from "react";
+import { createContext, useState } from "react";
 import ModalCriar from "../modal/modal-criar";
 
-function AdicioneSuaReceita() {
+interface AdicioneSuaReceitaProps {
+  receitas: any[];
+  addReceitas: Function;
+}
+
+function AdicioneSuaReceita(props: AdicioneSuaReceitaProps) {
   const [modalFiltroIsOpen, setFiltroIsOpen] = useState(false);
   const [modalCriarIsOpen, setCriarIsOpen] = useState(false);
 
@@ -17,6 +22,8 @@ function AdicioneSuaReceita() {
     },
   };
 
+  Modal.setAppElement("#root");
+
   return (
     <Col md={9}>
       <div className="ads">
@@ -27,20 +34,14 @@ function AdicioneSuaReceita() {
             </a>
           </span>
           <Modal isOpen={modalCriarIsOpen} style={customStyles}>
-            <ModalCriar />
+            <ModalCriar addReceitas={props.addReceitas} />
+
             <Button
               variant="secondary"
               type="button"
               onClick={() => setCriarIsOpen(false)}
             >
               Voltar
-            </Button>
-            <Button
-              variant="success"
-              type="button"
-              onClick={() => setFiltroIsOpen(false)}
-            >
-              Salvar
             </Button>
           </Modal>
         </div>

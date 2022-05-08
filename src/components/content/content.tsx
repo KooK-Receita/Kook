@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import AdicioneSuaReceita from "../adicione-sua-receita/adicione-sua-receita";
 import Carrosel from "../carossel/carrossel";
@@ -7,14 +8,21 @@ import Recipes from "../recipes/recipes";
 import "./content.css";
 
 function Content() {
+  const [receitas, setReceitas] = useState<any[]>([]);
+
+  function adicionar(objeto: never) {
+    setReceitas((old) => [...old, objeto]);
+    console.log("lista", receitas);
+  }
+
   return (
     <Col>
       <Header />
       <Row id="body" className="justify-content-md-center">
         <Carrosel />
-        <AdicioneSuaReceita />
+        <AdicioneSuaReceita receitas={receitas} addReceitas={adicionar} />
         <Categories />
-        <Recipes />
+        <Recipes receitas={receitas} />
       </Row>
     </Col>
   );

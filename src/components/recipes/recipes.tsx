@@ -2,12 +2,18 @@ import "./recipes.css";
 import Recipe from "./recipe/recipe";
 import { Col } from "react-bootstrap";
 
-export default function Recipes() {
+interface RecipesProps {
+  receitas: any[];
+}
+
+export default function Recipes(props: RecipesProps) {
   return (
     <Col md={9}>
-      <Recipe />
-      <Recipe />
-      <Recipe />
+      <div>
+        {props.receitas.map(function (receita, index) {
+          return <Recipe key={index} recipe={receita} />;
+        })}
+      </div>
     </Col>
   );
 }

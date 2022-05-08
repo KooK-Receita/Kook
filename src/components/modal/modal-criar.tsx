@@ -1,7 +1,23 @@
 import "./modal.css";
 import { Button, Col, Form, Row } from "react-bootstrap";
+import { useState } from "react";
 
-export default function ModalCriar() {
+interface ModalCriarProps {
+  addReceitas: Function;
+}
+
+export default function ModalCriar(props: ModalCriarProps) {
+  const [state, setState] = useState<any>({});
+
+  function handleInputChange(event: any) {
+    const target = event?.target;
+    const value = target?.type == "checkbox" ? target.checked : target.value;
+    const name = target?.name;
+
+    state[name] = value;
+    setState(state);
+  }
+
   return (
     <div>
       <h3>Adicione sua Receita</h3>
@@ -11,28 +27,37 @@ export default function ModalCriar() {
           <Col md={5}>
             <Form.Group>
               <Form.Label>Nome da Receita</Form.Label>
-              <Form.Control type="text" />
+              <Form.Control
+                onChange={handleInputChange}
+                name="nomeReceita"
+                type="text"
+              />
             </Form.Group>
           </Col>
 
           <Col md={2}>
             <Form.Group>
               <Form.Label>Tempo de preparo</Form.Label>
-              <Form.Control type="number" />
+              <Form.Control
+                onChange={handleInputChange}
+                name="tempoPreparo"
+                type="number"
+              />
             </Form.Group>
           </Col>
           <Col md={2}>
             <Form.Group>
               <Form.Label>Unidade</Form.Label>
-              <Form.Select>
+              <Form.Select onChange={handleInputChange} name="unidadeTempo">
                 <option>Minutos</option>
+                <option>Horas</option>
               </Form.Select>
             </Form.Group>
           </Col>
           <Col md={2}>
             <Form.Group>
               <Form.Label>Porções</Form.Label>
-              <Form.Control type="text" />
+              <Form.Control name="porcoes" type="text" />
             </Form.Group>
           </Col>
         </Row>
@@ -41,21 +66,21 @@ export default function ModalCriar() {
           <Col md={4}>
             <Form.Group>
               <Form.Label>Quantidade</Form.Label>
-              <Form.Control type="number" />
+              <Form.Control name="quantidade" type="number" />
             </Form.Group>
           </Col>
 
           <Col md={5}>
             <Form.Group>
               <Form.Label>Ingrediente</Form.Label>
-              <Form.Control type="text" />
+              <Form.Control name="ingrediente" type="text" />
             </Form.Group>
           </Col>
 
           <Col md={2}>
             <Form.Group>
               <Form.Label>Unidade</Form.Label>
-              <Form.Control type="text" />
+              <Form.Control name="unidade" type="text" />
             </Form.Group>
           </Col>
         </Row>
@@ -63,21 +88,32 @@ export default function ModalCriar() {
           <Col md={5}>
             <Form.Group>
               <Form.Label>Categoria</Form.Label>
-              <Form.Control type="text" />
+              <Form.Control name="categoria" type="text" />
             </Form.Group>
 
             <Form.Group>
               <Form.Label>Modo de preparo</Form.Label>
-              <textarea className="form-control"></textarea>
+              <textarea
+                onChange={handleInputChange}
+                name="modoPreparo"
+                className="form-control"
+              ></textarea>
             </Form.Group>
           </Col>
           <Col md={5}>
             <Form.Group>
               <Form.Label>Adicione uma imagem</Form.Label>
-              <input className="form-control" type="file" />
+              <input name="imagem" className="form-control" type="file" />
             </Form.Group>
           </Col>
         </Row>
+        <Button
+          onClick={() => props.addReceitas(state)}
+          variant="success"
+          type="button"
+        >
+          Salvar
+        </Button>
       </Form>
     </div>
   );
