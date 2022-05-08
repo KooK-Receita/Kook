@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { ContextProvider } from "./carrossel";
 import arrow from "../../assets/arrow.png";
+import { BsArrowLeftCircleFill, BsArrowRightCircle } from "react-icons/bs";
 
 const CorpoCarrossel: React.FC = () => {
   const { vetorDeElementos, index, setIndex }: any = useContext(
@@ -38,14 +39,14 @@ const CorpoCarrossel: React.FC = () => {
         className="prev arrow left-arrow"
         onClick={() => setIndex(index - 1)}
       >
-        <img src={arrow} />
+        <BsArrowLeftCircleFill />
       </button>
       <button
         type="button"
         className="next arrow right-arrow"
         onClick={() => setIndex(index + 1)}
       >
-        <img src={arrow} />
+        {BsArrowRightCircle}
       </button>
     </div>
   );
