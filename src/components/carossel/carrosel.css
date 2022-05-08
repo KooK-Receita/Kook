@@ -31,13 +31,13 @@ article {
   transition: linear 400ms;
 }
 
-.prevSlide {
+.nextSlide {
   transform: translateX(100%);
+  transition: ease-in;
   opacity: 0;
-  
 }
 
-.nextSlide {
+.prevSlide {
   transform: translateX(-100%);
   opacity: 0;
 }
@@ -52,16 +52,13 @@ article {
   border: none;
   display: grid;
   border-radius: 50px;
-  
 }
-
 
 .prev {
   left: 0;
 }
 .next {
   right: 0;
-  margin-right: 2px;
 }
 
 .text-div {

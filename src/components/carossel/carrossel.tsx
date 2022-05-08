@@ -27,10 +27,10 @@ const Carrosel = () => {
 
   //Altera o indice das imagens periodicamente
   useEffect(() => {
-    let indiceIntervalo = setTimeout(() => {
+    let indiceIntervalo = setInterval(() => {
       setIndex(index + 1);
     }, 5000);
-    return () => clearTimeout(indiceIntervalo);
+    return () => clearInterval(indiceIntervalo);
   }, [index]);
 
   return (
