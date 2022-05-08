@@ -28,14 +28,16 @@ article {
 .currentSlide {
   transform: translateX(0%);
   opacity: 1;
-}
-
-.nextSlide {
-  transform: translateX(100%);
-  opacity: 0;
+  transition: linear 400ms;
 }
 
 .prevSlide {
+  transform: translateX(100%);
+  opacity: 0;
+  
+}
+
+.nextSlide {
   transform: translateX(-100%);
   opacity: 0;
 }
@@ -50,7 +52,9 @@ article {
   border: none;
   display: grid;
   border-radius: 50px;
+  
 }
+
 
 .prev {
   left: 0;
