@@ -72,8 +72,8 @@ export default function ModalCriar(props: ModalCriarProps) {
 
           <Col md={5}>
             <Form.Group>
-              <Form.Label>Ingrediente</Form.Label>
-              <Form.Control name="ingrediente" type="text" />
+              <Form.Label>Ingredientes</Form.Label>
+              <Form.Control name="ingrediente" type="text" onChange={handleInputChange}/>
             </Form.Group>
           </Col>
 

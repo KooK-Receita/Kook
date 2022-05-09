@@ -8,3 +8,15 @@ form div label {
     font-size: 16px;
     color: black;
 }
+
+.imagemDetalhe {
+    width: 70%;
+    margin: auto;
+}
+
+.square {
+    border: 1px solid black;
+}
+.square h5, p {
+    margin-left: 6px;
+}

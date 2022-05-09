@@ -12,11 +12,10 @@ function Content() {
 
   function adicionar(objeto: never) {
     setReceitas((old) => [...old, objeto]);
-    console.log("lista", receitas);
   }
 
   return (
-    <Col>
+    <Col className="content">
       <Header />
       <Row id="body" className="justify-content-md-center">
         <Carrosel />
