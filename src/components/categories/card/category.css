@@ -26,8 +26,6 @@
   flex-direction: row;
   background: none;
   border: none;
-  overflow-x: scroll;
-  overflow-y: hidden;
 }
 .category-row {
   overflow-x: scroll;
