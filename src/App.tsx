@@ -7,8 +7,8 @@ import React from "react";
 
 function App() {
   return (
-    <Container id="main" fluid h-vh-100>
-      <Row className="d-flex">
+    <Container id="main fluid h-vh-100">
+      <Row className="flex">
         <LeftMenu />
         <Content />
       </Row>
