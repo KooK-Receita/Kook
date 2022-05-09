@@ -1,17 +1,14 @@
 .category {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: auto auto auto auto auto;
+  display: flex;
   height: 165px;
-  width: 165px;
+  width: 150px;
   flex-wrap: wrap;
   justify-items: center;
   align-items: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   border: 0.5px solid rgba(129, 123, 123, 0.329);
-
-  margin-right: 25px;
+  margin-right: 50px;
 }
 .category img {
   margin-top: 30px;
@@ -21,10 +18,16 @@
 }
 .category div {
   display: inherit;
+  justify-content: space-between;
 }
-
+.cards-container {
+  flex-direction: row;
+  background: none;
+  border: none;
+}
 .category-text {
-  display: inline;
+  display: inherit;
+  flex-basis: 100%;
   background-color: #ff9900;
   border-radius: 20px;
   padding: 5px 10px;

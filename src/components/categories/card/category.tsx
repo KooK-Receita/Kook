@@ -5,12 +5,12 @@ import data from "../../../assets/imagens_receitas/data";
 
 function Category() {
   return (
-    <Card className="category">
+    <Card className="cards-container">
       {data.map((item) => {
         const { id, imagem, categoria } = item;
 
         return (
-          <Card.Body key={id}>
+          <Card.Body key={id} className="category">
             <img src={imagem} className="img" />
             <br />
             <Card.Text className="category-text">{categoria}</Card.Text>
