@@ -1,7 +1,9 @@
 .category {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto auto auto auto;
   height: 165px;
   width: 165px;
-
   flex-wrap: wrap;
   justify-items: center;
   align-items: center;
@@ -10,11 +12,12 @@
   border: 0.5px solid rgba(129, 123, 123, 0.329);
 
   margin-right: 25px;
-  padding-left: 0;
-  padding-right: 0;
 }
 .category img {
   margin-top: 30px;
+  height: 50px;
+  width: 88px;
+  border-radius: 10px;
 }
 .category div {
   display: inherit;
@@ -25,9 +28,7 @@
   background-color: #ff9900;
   border-radius: 20px;
   padding: 5px 10px;
-  margin: auto;
   align-self: baseline;
-
   font-weight: 600;
   font-size: 17px;
 }

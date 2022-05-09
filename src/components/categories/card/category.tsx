@@ -11,12 +11,12 @@ function Category() {
 
         return (
           <Card.Body key={id}>
-            <img src={imagem} />
+            <img src={imagem} className="img" />
+            <br />
             <Card.Text className="category-text">{categoria}</Card.Text>
           </Card.Body>
         );
       })}
-      <img width="56" height="56" src="" />
     </Card>
   );
 }

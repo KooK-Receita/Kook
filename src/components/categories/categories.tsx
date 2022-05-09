@@ -14,11 +14,6 @@ function Categories() {
       <Col md={9}>
         <Row className="category-row">
           <Category />
-          <Category />
-          <Category />
-          <Category />
-          <Category />
-          <Category />
         </Row>
       </Col>
 
