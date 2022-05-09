@@ -7,12 +7,12 @@ import React from "react";
 
 function App() {
   return (
-    <Container id="main fluid h-vh-100">
+    <div id="main fluid">
       <Row className="flex">
         <LeftMenu />
         <Content />
       </Row>
-    </Container>
+    </div>
   );
 }
 

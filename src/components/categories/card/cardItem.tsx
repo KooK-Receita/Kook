@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import { cardContextProvider } from "./category";
+import React from "react";
 import { Card } from "react-bootstrap";
 import "./category.css";
 import data from "../../../assets/imagens_receitas/data";

@@ -7,19 +7,11 @@ import React, { useRef, useEffect } from "react";
 function Categories() {
   return (
     <div className="category-container">
-      <div className="arrow left-arrow">
-        <img src={arrow} />
-      </div>
-
       <Col md={9}>
         <Row className="category-row">
           <Category />
         </Row>
       </Col>
-
-      <div className="arrow right-arrow">
-        <img src={arrow} />
-      </div>
     </div>
   );
 }

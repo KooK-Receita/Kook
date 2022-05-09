@@ -23,7 +23,6 @@ function AdicioneSuaReceita() {
     <Col md={9}>
       <div className="ads">
         <div className="inside">
-          <span>Adicione sua receita</span>
           <span>
             <a className="modalLink" onClick={() => setCriarIsOpen(true)}>
               Adicione sua receita
@@ -48,7 +47,6 @@ function AdicioneSuaReceita() {
           </Modal>
         </div>
         <div className="inside">
-          <span>Filtre uma receita</span>
           <span>
             <a className="modalLink" onClick={() => setFiltroIsOpen(true)}>
               Filtre uma receita
