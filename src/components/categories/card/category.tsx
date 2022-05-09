@@ -1,15 +1,22 @@
 import { Card } from "react-bootstrap";
-import pizza from "../../../assets/pizza.png";
 import "./category.css";
 import React from "react";
+import data from "../../../assets/imagens_receitas/data";
 
 function Category() {
   return (
     <Card className="category">
-      <img width="56" height="56" src={pizza} />
-      <Card.Body>
-        <Card.Text className="category-text">Fast Food</Card.Text>
-      </Card.Body>
+      {data.map((item) => {
+        const { id, imagem, categoria } = item;
+
+        return (
+          <Card.Body key={id}>
+            <img src={imagem} />
+            <Card.Text className="category-text">{categoria}</Card.Text>
+          </Card.Body>
+        );
+      })}
+      <img width="56" height="56" src="" />
     </Card>
   );
 }
