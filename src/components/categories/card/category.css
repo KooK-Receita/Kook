@@ -36,3 +36,20 @@
   font-weight: 600;
   font-size: 17px;
 }
+
+.currentSlide {
+  transform: translateX(0%);
+  opacity: 1;
+  transition: linear 400ms;
+}
+
+.nextSlide {
+  transform: translateX(100%);
+  transition: ease-in;
+  opacity: 0;
+}
+
+.prevSlide {
+  transform: translateX(-100%);
+  opacity: 0;
+}
