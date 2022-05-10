@@ -32,11 +32,11 @@ export default function Recipe(props: RecipeProps) {
   Modal.setAppElement("#root");
 
   return (
-    <div className="recipe" onClick={() => setDetalheIsOpen(true)}>
+    <div className="recipe">
       <div className="recipe-image">
         <img width={236} height={148} src={bruschetta} />
       </div>
-      <div className="recipe-description">
+      <div className="recipe-description" onClick={() => setDetalheIsOpen(true)}>
         <h3>{nomeReceita}</h3>
         <hr />
         <span>{modoPreparo}</span>

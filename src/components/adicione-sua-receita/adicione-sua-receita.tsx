@@ -5,6 +5,7 @@ import Modal from "react-modal";
 import { createContext, useState } from "react";
 import ModalCriar from "../modal/modal-criar";
 
+
 interface AdicioneSuaReceitaProps {
   receitas: any[];
   addReceitas: Function;

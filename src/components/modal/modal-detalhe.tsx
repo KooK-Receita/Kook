@@ -7,28 +7,33 @@ export default function ModalDetalhe(props: any) {
         tempoPreparo,
         unidadeTempo,
         porcoes,
-        quantidade,
         ingrediente,
-        unidadeIngrediente,
         categoria,
         modoPreparo,
         imagem
     } = props.receita;
 
 
-    const ingredientesLista = ingrediente.split(",");
+    console.log(ingrediente);
+    console.log(props.receita)
+
+
     return (
         <div className="modal-detalhe">
             <h3>{nomeReceita}</h3>
             <hr />
             <img src={bruschetta} alt="imagem" className="imagemDetalhe"/>
             <h5>ingredientes</h5>
+            
             <ul>
-                {
-                    ingredientesLista.map((item: any, index: any) => {
-                        return <li key={index}><h6>{item}</h6></li>;
-                    }
-                )}
+                {ingrediente.map((ingrediente: any) => {
+                    return (
+                        <li key={ingrediente.nome}>
+                            {`${ingrediente.quantidade} ${ingrediente.unidade? ingrediente.unidade + 'de' : ''} ${ingrediente.nome}`}
+                        </li>
+                    );
+                }
+            )}
             </ul>
             <div className="square">
                 <h5>Modo de preparo</h5>

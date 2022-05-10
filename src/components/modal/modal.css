@@ -20,3 +20,12 @@ form div label {
 .square h5, p {
     margin-left: 6px;
 }
+
+.ingredienteButton {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.preview{
+    border: 1px solid black;
+}

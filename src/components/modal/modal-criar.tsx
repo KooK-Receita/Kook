@@ -1,22 +1,51 @@
 import "./modal.css";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import { useState } from "react";
+import Ingrediente from "../../models/ingrediente";
+
 
 interface ModalCriarProps {
   addReceitas: Function;
 }
 
 export default function ModalCriar(props: ModalCriarProps) {
-  const [state, setState] = useState<any>({unidadeTempo : "Minutos" });
+  const [state, setState] = useState<any>({ unidadeTempo: "Minutos", ingrediente: [] });
+  const [ingredientes, setIngredientes] = useState<any>([]);
+  const [ingrediente, setIngrediente] = useState<any>({});
 
   function handleInputChange(event: any) {
     const target = event?.target;
     const value = target?.type == "checkbox" ? target.checked : target.value;
-    const name = target?.name;
+    const name: any = target?.name;
 
-    state[name] = value;
-    setState(state);
+    if (name === "nome" || name === "unidade" || name === "quantidade") {
+      ingrediente[name] = value;
+      setIngrediente(ingrediente);
+    } else {
+      state[name] = value;
+      setState(state);
+    }
   }
+
+  function addIngrediente() {
+    setIngredientes((old:any) => [...old, ingrediente]);
+    state['ingrediente'].push(ingredientes);
+    console.log(state);
+  }
+
+  function preView() {
+    return (
+      <ul>
+        {
+          ingredientes.map((ingrediente: Ingrediente) => (
+            <li key={ingrediente.nome}>
+              {`${ingrediente.quantidade} ${ingrediente.unidade ? ingrediente.unidade + ' de ' : ''} ${ingrediente.nome}`}
+            </li>
+          ))}
+      </ul>
+    )
+  }
+
 
   return (
     <div>
@@ -26,7 +55,7 @@ export default function ModalCriar(props: ModalCriarProps) {
         <Row>
           <Col md={5}>
             <Form.Group>
-              <Form.Label>Nome da Receita</Form.Label>
+              <Form.Label>Nome da Receita *</Form.Label>
               <Form.Control
                 onChange={handleInputChange}
                 name="nomeReceita"
@@ -63,27 +92,37 @@ export default function ModalCriar(props: ModalCriarProps) {
         </Row>
 
         <Row>
-          <Col md={4}>
+          <Col md={2}>
             <Form.Group>
               <Form.Label>Quantidade</Form.Label>
-              <Form.Control name="quantidade" type="number" />
+              <Form.Control name="quantidade" type="number" onChange={handleInputChange} />
             </Form.Group>
           </Col>
 
           <Col md={5}>
             <Form.Group>
-              <Form.Label>Ingredientes</Form.Label>
-              <Form.Control name="ingrediente" type="text" onChange={handleInputChange}/>
+              <Form.Label>Ingrediente*</Form.Label>
+              <Form.Control name="nome" type="text" onChange={handleInputChange} />
             </Form.Group>
           </Col>
 
           <Col md={2}>
             <Form.Group>
               <Form.Label>Unidade</Form.Label>
-              <Form.Control name="unidade" type="text" />
+              <Form.Control name="unidade" type="text" onChange={handleInputChange} />
             </Form.Group>
           </Col>
+
         </Row>
+
+        <Col md={5}>
+          <div className="ingredienteButton">
+            <Button onClick={() => addIngrediente()}>
+              Adicionar ingrediente
+            </Button>
+          </div>
+        </Col>
+
         <Row>
           <Col md={5}>
             <Form.Group>
@@ -92,7 +131,7 @@ export default function ModalCriar(props: ModalCriarProps) {
             </Form.Group>
 
             <Form.Group>
-              <Form.Label>Modo de preparo</Form.Label>
+              <Form.Label>Modo de preparo *</Form.Label>
               <textarea
                 onChange={handleInputChange}
                 name="modoPreparo"
@@ -107,6 +146,11 @@ export default function ModalCriar(props: ModalCriarProps) {
             </Form.Group>
           </Col>
         </Row>
+        <Row>
+          <div className="preview">
+            {preView()}
+          </div>
+        </Row>
         <Button
           onClick={() => props.addReceitas(state)}
           variant="success"
@@ -115,6 +159,7 @@ export default function ModalCriar(props: ModalCriarProps) {
           Salvar
         </Button>
       </Form>
+
     </div>
   );
 }

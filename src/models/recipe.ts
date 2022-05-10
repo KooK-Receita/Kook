@@ -1,5 +1,6 @@
 import Autor from "./autor";
 import Category from "./category";
+import Ingrediente from "./ingrediente";
 
 export default interface Recipe {
 
@@ -7,10 +8,10 @@ export default interface Recipe {
     tempoPreparo: number;
     unidadeTempo: string;
     porcoes: string;
-    quantidade: number;
-    ingrediente: string;
-    unidadeIngrediente: string;
+    ingrediente: Ingrediente[];
+
     categoria: string;
     modoPreparo: string;
     imagem: Blob | null
 }
+
