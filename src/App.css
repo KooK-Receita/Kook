@@ -2,6 +2,9 @@ div.container-fluid {
   padding-left: 0;
   padding-right: 0;
 }
+.teste {
+  display: flex;
+}
 
 div.row {
   margin-right: 0px;
@@ -68,6 +71,7 @@ nav.default-bg.padding-nav.navbar.navbar-expand.navbar-light {
 .default-bg {
   background: #ffc700;
 }
+
 #main {
   background-color: rgb(245, 237, 237);
   font-family: 'Roboto Flex', sans-serif;

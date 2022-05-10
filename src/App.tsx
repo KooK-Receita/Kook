@@ -6,10 +6,13 @@ import { Container, Row } from "react-bootstrap";
 function App() {
   return (
     <Container id="main" fluid>
-      <Row className="flex" >
+      <div className="teste">
         <LeftMenu />
         <Content />
-      </Row>
+      </div>
+      {/* <Row className="flex" >
+
+      </Row> */}
     </Container>
   );
 }
