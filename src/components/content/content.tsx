@@ -1,3 +1,4 @@
+import { ok } from "assert";
 import { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import AdicioneSuaReceita from "../adicione-sua-receita/adicione-sua-receita";
@@ -14,12 +15,39 @@ function Content() {
     setReceitas((old) => [...old, objeto]);
   }
 
+  function filtrar(objeto: any) {
+    setReceitas((old) =>
+      old.filter((receita) => {
+        var isOk = true;
+        if (objeto.nome != null && receita.nome != objeto.nome) {
+          isOk = false;
+        }
+
+        if (objeto.porcoes != null && receita.porcoes != objeto.porcoes) {
+          isOk = false;
+        }
+
+        if (
+          objeto.tempoPreparo != null &&
+          receita.tempoPreparo != objeto.tempoPreparo
+        ) {
+          isOk = false;
+        }
+        return isOk;
+      })
+    );
+  }
+
   return (
     <Col className="content">
       <Header />
       <Row id="body" className="justify-content-md-center">
         <Carrosel />
-        <AdicioneSuaReceita receitas={receitas} addReceitas={adicionar} />
+        <AdicioneSuaReceita
+          receitas={receitas}
+          filtrar={filtrar}
+          addReceitas={adicionar}
+        />
         <Categories />
         <Recipes receitas={receitas} />
       </Row>

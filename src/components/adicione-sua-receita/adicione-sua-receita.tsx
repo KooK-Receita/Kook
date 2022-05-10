@@ -8,6 +8,7 @@ import ModalCriar from "../modal/modal-criar";
 interface AdicioneSuaReceitaProps {
   receitas: any[];
   addReceitas: Function;
+  filtrar: Function;
 }
 
 function AdicioneSuaReceita(props: AdicioneSuaReceitaProps) {
@@ -52,7 +53,7 @@ function AdicioneSuaReceita(props: AdicioneSuaReceitaProps) {
             </a>
           </span>
           <Modal isOpen={modalFiltroIsOpen} style={customStyles}>
-            <ModalFiltro />
+            <ModalFiltro filtrar={props.filtrar} />
             <Button
               variant="secondary"
               type="button"

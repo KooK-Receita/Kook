@@ -7,7 +7,7 @@ interface ModalCriarProps {
 }
 
 export default function ModalCriar(props: ModalCriarProps) {
-  const [state, setState] = useState<any>({unidadeTempo : "Minutos" });
+  const [state, setState] = useState<any>({ unidadeTempo: "Minutos" });
 
   function handleInputChange(event: any) {
     const target = event?.target;
@@ -57,7 +57,11 @@ export default function ModalCriar(props: ModalCriarProps) {
           <Col md={2}>
             <Form.Group>
               <Form.Label>Porções</Form.Label>
-              <Form.Control name="porcoes" type="text" />
+              <Form.Control
+                name="porcoes"
+                type="text"
+                onChange={handleInputChange}
+              />
             </Form.Group>
           </Col>
         </Row>
@@ -66,14 +70,22 @@ export default function ModalCriar(props: ModalCriarProps) {
           <Col md={4}>
             <Form.Group>
               <Form.Label>Quantidade</Form.Label>
-              <Form.Control name="quantidade" type="number" />
+              <Form.Control
+                name="quantidade"
+                type="number"
+                onChange={handleInputChange}
+              />
             </Form.Group>
           </Col>
 
           <Col md={5}>
             <Form.Group>
               <Form.Label>Ingredientes</Form.Label>
-              <Form.Control name="ingrediente" type="text" onChange={handleInputChange}/>
+              <Form.Control
+                name="ingrediente"
+                type="text"
+                onChange={handleInputChange}
+              />
             </Form.Group>
           </Col>
 
@@ -88,7 +100,11 @@ export default function ModalCriar(props: ModalCriarProps) {
           <Col md={5}>
             <Form.Group>
               <Form.Label>Categoria</Form.Label>
-              <Form.Control name="categoria" type="text" />
+              <Form.Control
+                name="categoria"
+                type="text"
+                onChange={handleInputChange}
+              />
             </Form.Group>
 
             <Form.Group>
