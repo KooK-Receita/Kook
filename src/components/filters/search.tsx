@@ -1,4 +1,5 @@
 import "./search.css";
+import React from "react";
 
 function Search() {
   return (

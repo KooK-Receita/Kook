@@ -1,12 +1,17 @@
-import { Card } from "react-bootstrap";
-import "./category.css";
-import React, { useState, useEffect, createContext } from "react";
-import data from "../../../assets/imagens_receitas/data";
-import { image } from "../../../components/carossel/carrossel";
-import CardComponent from "./cardItem";
-export const cardContextProvider = createContext<image | number | {}>(data);
+import "./carrosel.css";
+import React, { createContext, useEffect, useState } from "react";
+import data from "../../assets/imagens_receitas/data";
+import CorpoCarrossel from "./corpoCarrossel";
 
-function Category() {
+export type image = {
+  id: number;
+  imagem: string;
+  nome: string;
+}[];
+
+export const ContextProvider = createContext<image | number | {}>(data);
+
+const Carrosel = () => {
   const vetorDeElementos = data;
   const [index, setIndex] = useState<number>(0);
   //Altera o indice das imagens de acordo com o indice atual
@@ -29,10 +34,10 @@ function Category() {
   }, [index]);
 
   return (
-    <cardContextProvider.Provider value={{ vetorDeElementos, index, setIndex }}>
-      <CardComponent />
-    </cardContextProvider.Provider>
+    <ContextProvider.Provider value={{ vetorDeElementos, index, setIndex }}>
+      <CorpoCarrossel />
+    </ContextProvider.Provider>
   );
-}
+};
 
-export default Category;
+export default Carrosel;
