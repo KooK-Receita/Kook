@@ -3,7 +3,6 @@ import "./header.css";
 import pizza from "../../assets/pizza.png";
 import Search from "../filters/search";
 import MoreFilters from "../filters/more-filters";
-import React from "react";
 
 function Header() {
   return (

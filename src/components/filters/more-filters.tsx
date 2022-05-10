@@ -1,5 +1,4 @@
 import "./more-filters.css";
-import React from "react";
 
 function MoreFilters() {
   return (
