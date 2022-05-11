@@ -3,13 +3,15 @@ import { Button, Col, Form, Row } from "react-bootstrap";
 import { useState } from "react";
 import Ingrediente from "../../models/ingrediente";
 
-
 interface ModalCriarProps {
   addReceitas: Function;
 }
 
 export default function ModalCriar(props: ModalCriarProps) {
-  const [state, setState] = useState<any>({ unidadeTempo: "Minutos", ingrediente: [] });
+  const [state, setState] = useState<any>({
+    unidadeTempo: "Minutos",
+    ingrediente: [],
+  });
   const [ingredientes, setIngredientes] = useState<any>([]);
   const [ingrediente, setIngrediente] = useState<any>({});
 
@@ -28,24 +30,25 @@ export default function ModalCriar(props: ModalCriarProps) {
   }
 
   function addIngrediente() {
-    setIngredientes((old:any) => [...old, ingrediente]);
-    state['ingrediente'].push(ingredientes);
+    const ingredienteAux = Object.assign({}, ingrediente);
+    setIngredientes((old: any) => [...old, ingredienteAux]);
+    state["ingrediente"].push(ingrediente);
     console.log(state);
   }
 
   function preView() {
     return (
       <ul>
-        {
-          ingredientes.map((ingrediente: Ingrediente) => (
-            <li key={ingrediente.nome}>
-              {`${ingrediente.quantidade} ${ingrediente.unidade ? ingrediente.unidade + ' de ' : ''} ${ingrediente.nome}`}
-            </li>
-          ))}
+        {ingredientes.map((ingrediente: Ingrediente, index: number) => (
+          <li key={index}>
+            {`${ingrediente.quantidade} ${
+              ingrediente.unidade ? ingrediente.unidade + " de " : ""
+            } ${ingrediente.nome}`}
+          </li>
+        ))}
       </ul>
-    )
+    );
   }
-
 
   return (
     <div>
@@ -95,24 +98,35 @@ export default function ModalCriar(props: ModalCriarProps) {
           <Col md={2}>
             <Form.Group>
               <Form.Label>Quantidade</Form.Label>
-              <Form.Control name="quantidade" type="number" onChange={handleInputChange} />
+              <Form.Control
+                name="quantidade"
+                type="number"
+                onChange={handleInputChange}
+              />
             </Form.Group>
           </Col>
 
           <Col md={5}>
             <Form.Group>
               <Form.Label>Ingrediente*</Form.Label>
-              <Form.Control name="nome" type="text" onChange={handleInputChange} />
+              <Form.Control
+                name="nome"
+                type="text"
+                onChange={handleInputChange}
+              />
             </Form.Group>
           </Col>
 
           <Col md={2}>
             <Form.Group>
               <Form.Label>Unidade</Form.Label>
-              <Form.Control name="unidade" type="text" onChange={handleInputChange} />
+              <Form.Control
+                name="unidade"
+                type="text"
+                onChange={handleInputChange}
+              />
             </Form.Group>
           </Col>
-
         </Row>
 
         <Col md={5}>
@@ -147,9 +161,7 @@ export default function ModalCriar(props: ModalCriarProps) {
           </Col>
         </Row>
         <Row>
-          <div className="preview">
-            {preView()}
-          </div>
+          <div className="preview">{preView()}</div>
         </Row>
         <Button
           onClick={() => props.addReceitas(state)}
@@ -159,7 +171,6 @@ export default function ModalCriar(props: ModalCriarProps) {
           Salvar
         </Button>
       </Form>
-
     </div>
   );
 }
