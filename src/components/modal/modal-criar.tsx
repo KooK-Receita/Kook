@@ -89,7 +89,11 @@ export default function ModalCriar(props: ModalCriarProps) {
           <Col md={2}>
             <Form.Group>
               <Form.Label>Porções</Form.Label>
-              <Form.Control name="porcoes" type="text" />
+              <Form.Control
+                name="porcoes"
+                type="text"
+                onChange={handleInputChange}
+              />
             </Form.Group>
           </Col>
         </Row>
@@ -110,7 +114,7 @@ export default function ModalCriar(props: ModalCriarProps) {
             <Form.Group>
               <Form.Label>Ingrediente*</Form.Label>
               <Form.Control
-                name="nome"
+                name="ingrediente"
                 type="text"
                 onChange={handleInputChange}
               />
@@ -141,7 +145,11 @@ export default function ModalCriar(props: ModalCriarProps) {
           <Col md={5}>
             <Form.Group>
               <Form.Label>Categoria</Form.Label>
-              <Form.Control name="categoria" type="text" />
+              <Form.Control
+                name="categoria"
+                type="text"
+                onChange={handleInputChange}
+              />
             </Form.Group>
 
             <Form.Group>

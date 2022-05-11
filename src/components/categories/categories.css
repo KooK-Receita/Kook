@@ -3,7 +3,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   white-space: nowrap;
-  overflow-x: scroll;
+
   justify-content: space-between;
   margin-top: 25px;
 }
@@ -30,4 +30,8 @@
 
 .left-arrow img {
   transform: rotate(180deg);
+}
+
+.cards-container {
+  overflow-x: auto;
 }
