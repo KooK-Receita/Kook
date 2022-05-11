@@ -6,7 +6,7 @@ interface ModalFiltroProps {
 }
 
 export default function ModalFiltro(props: ModalFiltroProps) {
-  const [state, setState] = useState<any>();
+  const [state, setState] = useState<any>({});
 
   function handleInputChange(event: any) {
     const target = event?.target;

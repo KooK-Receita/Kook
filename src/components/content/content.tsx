@@ -16,26 +16,28 @@ function Content() {
   }
 
   function filtrar(objeto: any) {
-    setReceitas((old) =>
-      old.filter((receita) => {
-        var isOk = true;
-        if (objeto.nome != null && receita.nome != objeto.nome) {
-          isOk = false;
-        }
+      console.log('filtro', objeto)
 
-        if (objeto.porcoes != null && receita.porcoes != objeto.porcoes) {
-          isOk = false;
-        }
+      let listaAux = receitas.filter((receita) => {
+          var isOk = true;
+          if (objeto.nomeReceita != null && receita.nomeReceita != objeto.nomeReceita) {
+              isOk = false;
+          }
 
-        if (
-          objeto.tempoPreparo != null &&
-          receita.tempoPreparo != objeto.tempoPreparo
-        ) {
-          isOk = false;
-        }
-        return isOk;
+          if (objeto.porcoes != null && receita.porcoes != objeto.porcoes) {
+              isOk = false;
+          }
+
+          if (
+              objeto.tempoPreparo != null &&
+              receita.tempoPreparo != objeto.tempoPreparo
+          ) {
+              isOk = false;
+          }
+          return isOk;
       })
-    );
+    console.log("depos filter", listaAux)
+    setReceitas((old) => listaAux);
   }
 
   return (

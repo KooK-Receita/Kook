@@ -114,7 +114,7 @@ export default function ModalCriar(props: ModalCriarProps) {
             <Form.Group>
               <Form.Label>Ingrediente*</Form.Label>
               <Form.Control
-                name="ingrediente"
+                name="nome"
                 type="text"
                 onChange={handleInputChange}
               />

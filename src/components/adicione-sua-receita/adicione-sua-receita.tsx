@@ -24,7 +24,7 @@ function AdicioneSuaReceita(props: AdicioneSuaReceitaProps) {
     },
   };
 
-  Modal.setAppElement("#root");
+  Modal.setAppElement("#modal");
 
   return (
     <Col md={9}>
@@ -62,16 +62,10 @@ function AdicioneSuaReceita(props: AdicioneSuaReceitaProps) {
             >
               Voltar
             </Button>
-            <Button
-              variant="warning"
-              type="button"
-              onClick={() => setFiltroIsOpen(false)}
-            >
-              Filtrar
-            </Button>
           </Modal>
         </div>
       </div>
+      <div id="modal"></div>
     </Col>
   );
 }
